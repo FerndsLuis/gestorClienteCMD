@@ -1,0 +1,16 @@
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\bin\Debug\net5.0\GestorClienteCMD.exe
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\bin\Debug\net5.0\GestorClienteCMD.deps.json
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\bin\Debug\net5.0\GestorClienteCMD.runtimeconfig.json
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\bin\Debug\net5.0\GestorClienteCMD.runtimeconfig.dev.json
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\bin\Debug\net5.0\GestorClienteCMD.dll
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\bin\Debug\net5.0\ref\GestorClienteCMD.dll
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\bin\Debug\net5.0\GestorClienteCMD.pdb
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\obj\Debug\net5.0\GestorClienteCMD.csproj.AssemblyReference.cache
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\obj\Debug\net5.0\GestorClienteCMD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\obj\Debug\net5.0\GestorClienteCMD.AssemblyInfoInputs.cache
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\obj\Debug\net5.0\GestorClienteCMD.AssemblyInfo.cs
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\obj\Debug\net5.0\GestorClienteCMD.csproj.CoreCompileInputs.cache
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\obj\Debug\net5.0\GestorClienteCMD.dll
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\obj\Debug\net5.0\ref\GestorClienteCMD.dll
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\obj\Debug\net5.0\GestorClienteCMD.pdb
+C:\Users\luish\source\repos\GestorClienteCMD\GestorClienteCMD\obj\Debug\net5.0\GestorClienteCMD.genruntimeconfig.cache
