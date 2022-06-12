@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace GestorClienteCMD
 {
@@ -19,6 +21,7 @@ namespace GestorClienteCMD
 
         static void Main(string[] args)
         {
+            Carregar();
             bool escolheuSair = false;
 
             while(!escolheuSair)
@@ -35,8 +38,10 @@ namespace GestorClienteCMD
                         Adicionar();
                         break;
                     case Menu.Listagem:
+                        Listagem();
                         break;
                     case Menu.Remover:
+                        Remover();
                         break;
                     case Menu.Sair:
                         escolheuSair = true;
@@ -62,10 +67,89 @@ namespace GestorClienteCMD
             cliente.cpf = Console.ReadLine();
 
             clientes.Add(cliente);
+            Salvar();
 
             Console.WriteLine("Cadastro concluído, pressione ENTER para sair");
             Console.ReadLine();
+        }
 
+        static void Listagem()
+        {
+            if(clientes.Count > 0)
+            {
+                Console.WriteLine("Lista de cliente");
+                int i = 0;
+
+                foreach(Cliente cliente in clientes)
+                {
+                    Console.WriteLine($"ID: {i}");
+                    Console.WriteLine($"Nome:  {cliente.nome}");
+                    Console.WriteLine($"CPF: {cliente.cpf}");
+                    Console.WriteLine($"E-mail: {cliente.email}");
+                    Console.WriteLine("==============");
+                    i++;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Nenhum cliente cadastrado");               
+            }
+
+            Console.WriteLine("Pressione ENTER para sair");
+            Console.ReadLine();
+        }
+
+        static void Remover()
+        {
+            Listagem();
+            Console.WriteLine("Digite o ID que deseja remover: ");
+            int id = int.Parse(Console.ReadLine());
+
+            if(id >= 0 && id < clientes.Count)
+            {
+                clientes.RemoveAt(id);
+                Salvar();
+            }
+            else
+            {
+                Console.WriteLine("ID digitado é inválido, tente novamente");
+                Console.ReadLine();
+            }
+
+        }
+
+        static void Salvar()
+        {
+            FileStream stream = new FileStream("clients.dat", FileMode.OpenOrCreate);
+            BinaryFormatter enconder = new BinaryFormatter();
+
+            enconder.Serialize(stream, clientes);
+
+            stream.Close();
+        }
+
+        static void Carregar()
+        {
+            try
+            {
+                FileStream stream = new FileStream("clients.dat", FileMode.OpenOrCreate);
+                BinaryFormatter enconder = new BinaryFormatter();
+
+                clientes = (List<Cliente>)enconder.Deserialize(stream);
+
+                if(clientes == null)
+                {
+                    clientes = new List<Cliente>();
+                }
+
+                stream.Close();
+            }
+            catch(Exception ex)
+            {
+                clientes = new List<Cliente>();
+            }
+
+           
         }
     }
 }
